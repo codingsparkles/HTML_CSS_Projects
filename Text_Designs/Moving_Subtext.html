@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Moving Subtext</title>
+  <style>
+    body {
+      min-height: 97vh;
+      background: linear-gradient(rgb(228, 243,228), rgb(163, 209, 231));
+    }
+
+    body, .parent {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .parent {
+      gap: 20px;
+      color:#a206f6;
+      font-size: 5rem;
+      height: 90px;
+      overflow: hidden;
+    }
+
+    .child {
+      width: 350px;
+      height: 295px;
+      transform: translateY(103px);
+      animation: move 3s alternate infinite;
+    }
+
+    @keyframes move {
+      33%,66%{
+        transform: translateY(12px);
+      }
+      66%,100%{
+        transform: translateY(-80px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="parent">
+    I am <div class="child">
+      <span>Coder</span>
+      <span>YouTuber</span>
+      <span>Developer</span>
+    </div>
+  </div>
+</body>
+</html>

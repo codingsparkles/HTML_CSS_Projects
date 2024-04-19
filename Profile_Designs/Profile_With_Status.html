@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Profile with Status</title>
+  <style>
+    body{
+      min-height: 97vh;
+      background: radial-gradient(orange, limegreen);
+      display: grid;
+      place-items: center;
+    }
+    .profile {
+      height: 10rem;
+      width: 10rem;
+      position: relative;
+    }
+    .profile * {
+      position: absolute;
+      border-radius: 50%;
+    }
+
+    img {
+      object-fit: cover;
+      height: 10rem;
+      width: 10rem;
+      border:10px solid#fff;
+    }
+
+    .status {
+      height: 2rem;
+      width: 2rem;
+      border: 5px solid #fff;
+      bottom: 5px;
+      right: -20px;
+      animation: statuschange 2s infinite;
+    }
+
+    @keyframes statuschange {
+      0%, 25%{
+        background: green;
+      }
+      35%, 60%{
+        background: red;
+      }
+      70%, 100%{
+        background: blueviolet;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="profile">
+    <img src="https://cdn.pixabay.com/photo/2016/11/18/19/07/happy-1836445_960_720.jpg" alt="profile-image">
+    <span class="status"></span>
+  </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Circle Loader</title>
+  <style>
+    :root {
+      --bgColor: #F8FAE5;
+      --circleBgColor: #437660;
+      --primaryColor: #B19470;
+      --secondaryColor: #76453B;
+    }
+
+    body {
+      min-height: 97vh;
+      display: grid;
+      place-items: center;
+      background: var(--bgColor);
+    }
+
+    .loader {
+      height: 5rem;
+      width: 5rem;
+      border-radius: 50%;
+      background: var(--circleBgColor);
+      animation: loader 2s alternate infinite;
+    }
+
+    @keyframes loader {
+      20% {
+        box-shadow: 0 100px var(--primaryColor);
+      }
+
+      40% {
+        box-shadow: -100px 0 var(--primaryColor);
+      }
+
+      60% {
+        box-shadow: -100px 0 var(--primaryColor), 0 -100px var(--secondaryColor);
+      }
+
+      80% {
+        box-shadow: -100px 0 var(--primaryColor), 100px 0 var(--secondaryColor);
+      }
+
+      100% {
+        box-shadow: 0 0 var(--primaryColor), 0 0 var(--secondaryColor);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="loader"></div>
+</body>
+
+</html>

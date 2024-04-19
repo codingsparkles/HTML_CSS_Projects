@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Wifi Signal Loader</title>
+  <style>
+    :root {
+      --bgColor: whitesmoke;
+      --borderColor: grey;
+    }
+
+    body {
+      min-height: 97vh;
+      background: var(--bgColor);
+      display: grid;
+      place-items: center;
+    }
+
+    .wifi {
+      height: 300px;
+      width: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 50% 100%, var(--borderColor) 0 20px, #0000 0);
+      clip-path: polygon(100% 0%, 0% 0%, 50% 100%);
+      animation: wifi 2s linear infinite;
+    }
+
+    @keyframes wifi {
+      33% {
+        background: radial-gradient(circle at 50% 100%, var(--borderColor) 0 20px, #0000 0 50px, var(--borderColor) 0 100px, #0000 0);
+      }
+
+      66% {
+        background: radial-gradient(circle at 50% 100%, var(--borderColor) 0 20px, #0000 0 50px, var(--borderColor) 0 100px, #0000 0 150px, var(--borderColor) 0 200px, #0000 0);
+      }
+
+      100% {
+        background: radial-gradient(circle at 50% 100%, var(--borderColor) 0 20px, #0000 0 50px, var(--borderColor) 0 100px, #0000 0 150px, var(--borderColor) 0 200px, #0000 0 250px, var(--borderColor) 0 300px, #0000 0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wifi"></div>
+</body>
+
+</html>
