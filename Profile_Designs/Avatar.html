@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Avatar</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="">
+  <style>
+    body {
+      background: darkgray;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 95vh;
+    }
+
+    .avatar {
+      height: 20rem;
+      width: 20rem;
+      background: lightgrey;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .avatar-head {
+      height: 5em;
+      width: 5em;
+      border: 5px solid grey;
+      border-radius: 50%;
+    }
+
+    .avatar-body {
+      height: 5em;
+      width: 10em;
+      border-radius: 5em 5em 0 0;
+      border: 5px solid grey;
+      border-bottom: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="avatar">
+    <div class="avatar-head">
+    </div>
+    <div class="avatar-body"></div>
+  </div>
+</body>
+
+</html>

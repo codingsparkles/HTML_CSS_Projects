@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Button - Border Animation</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="">
+  <style>
+    body {
+      min-height: 95vh;
+      background: #E1F8DC;
+    }
+
+    body,
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .btn-container {
+      height: 100px;
+      width: 300px;
+      border-radius: 50px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .btn-border {
+      height: 300%;
+      width: 300%;
+      background: linear-gradient(to right, #78CAFF, #7EE6f6, #F8279E);
+    }
+
+    .btn {
+      position: absolute;
+      height: 70%;
+      width: 90%;
+      background: #1D1E22;
+      color: #fff;
+      border: none;
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: capitalize;
+      border-radius: 50px;
+    }
+
+    .btn-container:hover .btn-border {
+      animation: rotation 2s infinite;
+    }
+
+    @keyframes rotation {
+      100% {
+        rotate: 360deg;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="btn-container">
+    <div class="btn-border">
+    </div>
+    <button class="btn">Hover Me</button>
+  </div>
+</body>
+
+</html>
