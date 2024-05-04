@@ -1,0 +1,202 @@
+:root {
+  --bgColor: #FFFFFF;
+  --color1: #000;
+  --color2: #1B1839;
+  --color3: #5F5D74;
+  --chipBgColor: #F0F0F9;
+  --chipColor: #6E6C81;
+  --hoverColor: #35C2CF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+h1 {
+  font-family: 'Merriwhether', sans-serif;
+}
+
+body {
+  background: url(assets/find-location.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+
+main,
+nav,
+li,
+.content,
+.search,
+.container,
+footer,
+footer section,
+.chip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  width: 100%;
+  background: var(--bgColor);
+}
+
+nav {
+  height: 110px;
+  justify-content: end;
+  gap: 1rem;
+  padding-right: 2rem;
+}
+
+li {
+  list-style-type: none;
+  justify-content: end;
+  font-size: 16px;
+  height: 80px;
+  font-family: 'Mulish', sans-serif;
+  border-radius: 5px;
+  padding: 0 .75rem;
+}
+
+li:hover,
+li:focus,
+li:active {
+  background: var(--hoverColor);
+  color: var(--bgColor)
+}
+
+.content {
+  flex: 1;
+  flex-direction: column;
+  margin: 1rem
+}
+
+.content p {
+  color: var(--bgColor);
+  font-size: 42px;
+  font-weight: bold;
+  align-self: flex-start;
+  line-height: 58px;
+}
+
+.content .search {
+  border-radius: 5px;
+  margin-top: 2rem;
+  width: 65vw;
+  flex-wrap: wrap;
+}
+
+.content * {
+  justify-content: start;
+}
+
+.container {
+  flex: 1;
+  height: 35px;
+  padding: 1.4rem;
+  gap: 1rem;
+  background: var(--bgColor);
+}
+
+li,
+input,
+button,
+.prize,
+.chip {
+  font-family: 'Mulish', sans-serif;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+.content .search button {
+  height: 80px;
+  min-width: 160px;
+  background: #F89259;
+  color: var(--bgColor);
+  font-size: 16px;
+  border: none
+}
+
+.content .search button:hover {
+  color: var(--color1)
+}
+
+footer {
+  background: var(--bgColor);
+  width: 96%;
+  margin: 1rem;
+  border-radius: 1rem;
+  padding: 2rem 0;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+footer section {
+  align-items: start;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 367px;
+  min-height: 162px;
+  padding: 2rem;
+}
+
+footer section {
+  font-weight: bold;
+}
+
+footer section h1 {
+  color: var(--color2);
+  -webkit-text-stroke-color: var(--color1);
+  font-size: 26px;
+}
+
+footer section .prize {
+  color: var(--color2);
+  font-size: 18px;
+}
+
+footer section .chip {
+  background: var(--chipBgColor);
+  color: var(--chipColor);
+  font-size: 16px;
+  border-radius: 19px;
+  height: 38px;
+  gap: 10px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.chip img {
+  height: 24px;
+  width: 24px;
+}
+
+.container img {
+  height: 36px;
+  width: 36px;
+}
+
+@media screen and (max-width: 1030px) {
+  .content .search button {
+    flex-basis: 100%;
+  }
+}
+
+@media screen and (max-width: 538px) {
+  nav {
+    padding-right: 0;
+  }
+}
