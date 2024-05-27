@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Simple Profile Card</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
+            min-height: 97vh;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body,
+        .profile,
+        .details {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile {
+            gap: 1rem;
+            height: 5rem;
+            width: 18rem;
+            padding: .5rem;
+            border-radius: 5rem;
+            box-shadow: 0 1rem 5rem grey;
+            background: linear-gradient(120deg, #fff 20%, #96fbc4 0);
+        }
+
+        img {
+            width: 4rem;
+            height: 4rem;
+            object-fit: cover;
+            border-radius: 50%;
+            border: .35rem solid #96fbc4;
+        }
+
+        .details {
+            flex: 1;
+            gap: .35rem;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .name {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .designation {
+            font-size: .85rem;
+        }
+
+        .profile:hover {
+            animation: anime 1s ease-in;
+        }
+
+        @keyframes anime {
+            100% {
+                scale: 1.5
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="profile">
+        <img src="https://cdn.pixabay.com/photo/2016/11/18/19/07/happy-1836445_1280.jpg" />
+        <div class="details">
+            <div class='name'>
+                John Deo
+            </div>
+            <div class='designation'>
+                Web Developer
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
