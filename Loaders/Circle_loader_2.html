@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Circle Loader</title>
+  <style>
+    :root {
+      --bgColor: #E5E1DA;
+      --shadowColor: #92C7CF;
+    }
+
+    body {
+      min-height: 97vh;
+      background: #FBF9F1;
+      display: grid;
+      place-items: center;
+    }
+
+    .circle {
+      height: 5rem;
+      width: 5rem;
+      background: var(--bgColor);
+      color: var(--shadowColor);
+      border-radius: 50%;
+      box-shadow: 0 0 0 -1rem, 0 0 0 -1rem, 0 0 0 -1rem, 0 0 0 -1rem;
+      animation: loader 2s infinite;
+    }
+
+    @keyframes loader {
+      25% {
+        box-shadow: -2.5rem 2.5rem 0 -1rem, -2.5rem -2.5rem 0 -1rem, 2.5rem -2.5rem 0 -1rem, 2.5rem 2.5rem 0 -1rem;
+      }
+
+      50% {
+        box-shadow: -2.5rem -2.5rem 0 -1rem, 2.5rem -2.5rem 0 -1rem, 2.5rem 2.5rem 0 -1rem, -2.5rem 2.5rem 0 -1rem;
+      }
+
+      75% {
+        box-shadow: 2.5rem -2.5rem 0 -1rem, 2.5rem 2.5rem 0 -1rem, -2.5rem 2.5rem 0 -1rem, -2.5rem -2.5rem 0 -1rem;
+      }
+
+      100% {
+        box-shadow: 2.5rem 2.5rem 0 -1rem, -2.5rem 2.5rem 0 -1rem, -2.5rem -2.5rem 0 -1rem, 2.5rem -2.5rem 0 -1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="circle"></div>
+</body>
+
+</html>

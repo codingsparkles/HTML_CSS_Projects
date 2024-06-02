@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Border Loader</title>
+  <style>
+    :root {
+      --bgColor: #FEFDED;
+      --borderColor: #A1C398;
+      --borderColor2: #FA7070;
+    }
+
+    body {
+      min-height: 97vh;
+      background: var(--bgColor);
+      display: grid;
+      place-items: center;
+    }
+
+    .loader,
+    .border {
+      height: 5rem;
+      width: 5rem;
+      border-radius: 50%;
+      border: .5rem solid;
+    }
+
+    .loader {
+      border-color: var(--borderColor)
+    }
+
+    .border {
+      position: fixed;
+      border-color: var(--borderColor2) transparent transparent;
+      animation: rotate 2s linear infinite;
+    }
+
+    @keyframes rotate {
+      to {
+        rotate: 360deg;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="loader"></div>
+  <div class="border"></div>
+</body>
+
+</html>

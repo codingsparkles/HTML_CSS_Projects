@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Billing Page</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #F8F9FF;
+      font-family: "Poppins", sans-serif;
+      user-select: none;
+    }
+
+    body,
+    main,
+    .radio-group,
+    .bill-type,
+    .bill-card,
+    .type {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    main {
+      border: 1px solid #C0C8E3;
+      background: #FFFFFF;
+      box-shadow: 5px 5px #C0C8E3;
+      flex-wrap: wrap;
+    }
+
+    .bill-type,
+    .bill-card {
+      height: 250px;
+      width: 220px;
+      border: .5px solid #C0C8E3;
+    }
+
+    .radio-group,
+    .bill-card {
+      flex-direction: column;
+    }
+
+    .bill-card {
+      gap: 4px;
+      color: #0C1431
+    }
+
+    .type,
+    .radio-group {
+      gap: .5rem
+    }
+
+    .type label {
+      font-size: 1rem;
+    }
+
+    .radio-group div {
+      align-self: start;
+    }
+
+    .user-type {
+      font-size: 22px;
+      font-weight: 400
+    }
+
+    .price {
+      font-size: 18px;
+    }
+
+    .bill-card button {
+      background: #000;
+      color: #ffff;
+      border-style: none;
+      height: 50px;
+      width: 145px;
+      border-radius: 4px;
+      margin-top: 1rem
+    }
+
+    .link a {
+      text-decoration: underline;
+    }
+
+    input[type="radio"] {
+      height: 1.25rem;
+      width: 1.25rem;
+    }
+
+    .bill-card:last-child .user-type {
+      margin-top: 35px;
+    }
+
+    .link {
+      margin-top: .5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="bill-type">
+      <div class="radio-group">
+        <div class="type type-one">
+          <input type="radio" id="monthly" name="bill-type" onchange="changeColor()">
+          <label for="monthly">Billed monthly</label>
+        </div>
+        <div class="type type-two">
+          <input type="radio" id="annually" name="bill-type" onchange="changeColor()">
+          <label for="annually">Billed annually</label>
+        </div>
+      </div>
+    </div>
+    <div class="bill-card">
+      <div class="user-type">
+        For individuals
+      </div>
+      <div class="price">
+        $9.99 / month
+      </div>
+      <button>
+        Buy now
+      </button>
+    </div>
+    <div class="bill-card">
+      <div class="user-type">
+        For families
+      </div>
+      <div class="price">
+        $16.99 / month
+      </div>
+      <button>
+        Buy now
+      </button>
+    </div>
+    <div class="bill-card">
+      <div class="user-type">
+        For teams
+      </div>
+      <div class="price">
+        $16.58 / month
+      </div>
+      <button>
+        Try for free
+      </button>
+      <div class="link">
+        or <a>purchase now</a>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

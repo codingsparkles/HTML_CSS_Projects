@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Responsive Subscribe Newsletter</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+
+<style>
+  :root {
+    --cardBgColor: #ffffff;
+    --color: #fefefe;
+    --btnBgColor: #3d9fff;
+    --btnColor: #e3f2ff;
+    --borderColor: lightgrey;
+  }
+
+  * {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  body,
+  main,
+  .msg-container,
+  .check-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  body {
+    min-height: 100vh;
+    background: linear-gradient(125deg, var(--color), var(--borderColor));
+  }
+
+  main,
+  .msg-container {
+    flex-direction: column;
+  }
+
+  .msg-container {
+    width: 100%;
+  }
+
+  main {
+    height: 12rem;
+    width: 24rem;
+    background: var(--cardBgColor);
+    box-shadow: 0 3px 5px 0 var(--borderColor);
+    padding: 2rem;
+    gap: 1rem;
+  }
+
+  h1 {
+    font-size: 1.25rem;
+  }
+
+  p,
+  label {
+    font-size: .75rem;
+  }
+
+  input[type='text'] {
+    height: 1.5rem;
+    padding: .5rem;
+    flex: 1;
+    border: 1px solid var(--borderColor)
+  }
+
+  input[type='text']:focus-within {
+    border: 1px solid var(--btnBgColor);
+    outline: none;
+  }
+
+  button {
+    height: 2.6rem;
+    width: 6.5rem;
+    background: var(--btnBgColor);
+    border: none;
+    color: var(--btnColor);
+    text-transform: uppercase;
+  }
+
+  button i {
+    margin: 0 .5rem
+  }
+
+  .action-container {
+    width: 100%;
+    display: flex;
+    gap: .5rem;
+  }
+
+  .check-container {
+    align-self: self-start;
+  }
+
+  input[type='checkbox'] {
+    height: 1rem;
+    width: 1rem;
+    margin-right: .5rem;
+  }
+
+  @media only screen and (max-width: 480px) {
+    main {
+      height: 14rem;
+    }
+
+    .action-container {
+      flex-direction: column;
+    }
+
+    button {
+      width: 100%;
+    }
+
+    .msg-container {
+      align-items: flex-start;
+    }
+  }
+</style>
+</head>
+
+<body>
+  <main>
+    <h1>Let's keep in touch</h1>
+    <div class="msg-container">
+      <p>Subscribe to keep up with fresh news and exciting updates.</p>
+      <p>We promise not to spam you!.</p>
+    </div>
+    <div class="action-container">
+      <input type="text" placeholder="Enter your email address">
+      <button>Send<i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+    <div class="check-container">
+      <input type="checkbox">
+      <label>I agree to my email address being stored and used to receive monthly newsletter.</label>
+    </div>
+  </main>
+</body>
+
+</html>

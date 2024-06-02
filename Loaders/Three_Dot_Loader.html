@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Three Dot Loader</title>
+  <style>
+    :root {
+      --bgColor: #E1AFD1;
+      --shadowColor: #7469B6;
+    }
+
+    body {
+      min-height: 97vh;
+      background: #FFE6E6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .circle {
+      height: 5rem;
+      width: 5rem;
+      border-radius: 50%;
+      margin-left: -10rem;
+      background: var(--bgColor);
+      color: var(--bgColor);
+      box-shadow: 6rem 0 var(--bgColor), 12rem 0 var(--bgColor);
+      animation: loader 2s infinite;
+    }
+
+    @keyframes loader {
+      33% {
+        background: var(--shadowColor);
+        box-shadow: 6rem 0 var(--bgColor), 12rem 0 var(--bgColor);
+      }
+
+      66% {
+        box-shadow: 6rem 0 var(--shadowColor), 12rem 0 var(--bgColor);
+      }
+
+      100% {
+        box-shadow: 6rem 0 var(--bgColor), 12rem 0 var(--shadowColor);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="circle"></div>
+</body>
+
+</html>
