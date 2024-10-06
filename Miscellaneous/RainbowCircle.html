@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Rainbow Circle</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <style>
+    :root {
+      --bgColor: #98DED9;
+      --primaryColor: pink;
+      --borderColor: #fff;
+      --textColor: red;
+    }
+
+    body {
+      min-height: 98vh;
+      background: var(--bgColor);
+    }
+
+    .rainbow,
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .rainbow {
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+      background: radial-gradient(circle at center, var(--primaryColor) 20px, transparent 0), conic-gradient(Red 14.2%, orange 0 28.4%, yellow 0 42.6%, green 0 56.8%, blue 0 71%, indigo 0 85.2%, violet 0);
+      box-shadow: 0 0 30px var(--primaryColor);
+      border: 5px solid var(--borderColor);
+      animation: spin 2s alternate infinite
+    }
+
+    span {
+      position: fixed;
+      background: var(--primaryColor);
+      font-size: 1rem;
+      font-weight: bold;
+      color: var(--textColor);
+    }
+
+    @keyframes spin {
+      to {
+        rotate: 360deg;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="rainbow">
+  </div>
+  <span>Spin</span>
+</body>
+
+</html>
