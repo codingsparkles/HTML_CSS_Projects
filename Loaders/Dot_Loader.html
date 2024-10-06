@@ -7,35 +7,40 @@
   <title>Dot Loader</title>
   <style>
     :root {
-      --bgColor: #2D9596;
+      --bgColor: #ECF4D6;
+      --circleBgColor: #2D9596;
       --shadowColor: #9AD0C2;
       --shadowColor2: #265073;
     }
 
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
     body {
-      min-height: 97vh;
-      background: #ECF4D6;
+      min-height: 100vh;
       display: grid;
       place-items: center;
+      background: var(--bgColor);
     }
 
     .circle {
       height: 5rem;
       width: 5rem;
       border-radius: 50%;
-      background: var(--bgColor);
+      background: var(--circleBgColor);
       box-shadow: 0 0 var(--shadowColor), 0 0 var(--shadowColor2);
       animation: loader 2s alternate infinite;
     }
 
     @keyframes loader {
       33% {
-        box-shadow: 0 6rem var(--shadowColor), 0 -6rem var(--shadowColor2);
-        rotate: 90deg;
+        box-shadow: 0 6rem var(--shadowColor),
+         0 -6rem var(--shadowColor2);
+         rotate: 90deg;
       }
-
-      66%,
-      90% {
+      66%, 90% {
         rotate: 180deg;
       }
     }
