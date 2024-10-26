@@ -15,8 +15,16 @@
     body {
       min-height: 97vh;
       background: var(--bgColor);
-      display: grid;
-      place-items: center;
+      flex-wrap: wrap;
+    }
+
+    body,
+    .loader,
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem
     }
 
     .loader,
@@ -24,16 +32,71 @@
       height: 5rem;
       width: 5rem;
       border-radius: 50%;
-      border: .5rem solid;
+      border: .5rem solid var(--borderColor);
     }
 
     .loader {
-      border-color: var(--borderColor)
+      border-left-color: var(--borderColor2);
+      animation: rotate 2s linear infinite;
+    }
+
+    .loader1,
+    .loader2,
+    .loader2 .loader.child,
+    .loader.loader4 {
+      border-color: var(--borderColor) var(--bgColor) var(--borderColor2);
     }
 
     .border {
-      position: fixed;
+      position: absolute;
       border-color: var(--borderColor2) transparent transparent;
+    }
+
+    .loader1,
+    .loader2,
+    .border {
+      animation: rotate 2s linear infinite;
+    }
+
+    .loader1 {
+      animation: rotate 2s reverse infinite;
+    }
+
+    .loader2 .loader.child {
+      height: 3rem;
+      width: 3rem;
+      border-color: var(--borderColor2) var(--bgColor) var(--borderColor);
+    }
+
+    /* 4th loader */
+
+    .container {
+      height: 5rem;
+      width: 5rem;
+    }
+
+    .container .loader {
+      position: absolute;
+    }
+
+    .container .loader4 {
+      height: 5rem;
+      width: 5rem;
+      border-radius: 50%;
+      animation: rotate 2s linear infinite;
+    }
+
+    .container .loader.child {
+      height: 3rem;
+      width: 3rem;
+      border-color: var(--borderColor2) var(--bgColor) var(--borderColor);
+      animation: rotate1 2s linear infinite;
+    }
+
+    .container .loader.child-level2 {
+      height: 1rem;
+      width: 1rem;
+      border-color: var(--borderColor) var(--bgColor) var(--borderColor2);
       animation: rotate 2s linear infinite;
     }
 
@@ -42,12 +105,31 @@
         rotate: 360deg;
       }
     }
+
+    @keyframes rotate1 {
+      to {
+        rotate: -360deg;
+      }
+    }
   </style>
 </head>
 
 <body>
-  <div class="loader"></div>
-  <div class="border"></div>
+  <div class="loader">
+  </div>
+  <div class="loader loader1">
+  </div>
+  <div class="loader loader2">
+    <div class="loader child"></div>
+  </div>
+  <div class="container">
+    <div class="loader loader4">
+    </div>
+    <div class="loader child">
+    </div>
+    <div class="loader child-level2"></div>
+  </div>
+
 </body>
 
 </html>

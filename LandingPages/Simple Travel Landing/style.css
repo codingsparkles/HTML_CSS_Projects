@@ -52,8 +52,9 @@ header {
 }
 
 nav {
-  height: 110px;
+  height: 6.875rem;
   justify-content: end;
+  flex-wrap: wrap;
   gap: 1rem;
   padding-right: 2rem;
 }
@@ -61,10 +62,10 @@ nav {
 li {
   list-style-type: none;
   justify-content: end;
-  font-size: 16px;
-  height: 80px;
+  font-size: '1rem';
+  height: 3rem;
   font-family: 'Mulish', sans-serif;
-  border-radius: 5px;
+  border-radius: .4rem;
   padding: 0 .75rem;
 }
 
@@ -83,14 +84,14 @@ li:active {
 
 .content p {
   color: var(--bgColor);
-  font-size: 42px;
+  font-size: 2.625rem;
   font-weight: bold;
   align-self: flex-start;
-  line-height: 58px;
+  line-height: 3.625rem;
 }
 
 .content .search {
-  border-radius: 5px;
+  border-radius: .3rem;
   margin-top: 2rem;
   width: 65vw;
   flex-wrap: wrap;
@@ -102,7 +103,7 @@ li:active {
 
 .container {
   flex: 1;
-  height: 35px;
+  height: 2rem;
   padding: 1.4rem;
   gap: 1rem;
   background: var(--bgColor);
@@ -126,7 +127,7 @@ input {
   min-width: 160px;
   background: #F89259;
   color: var(--bgColor);
-  font-size: 16px;
+  font-size: '1rem';
   border: none
 }
 
@@ -147,9 +148,9 @@ footer {
 footer section {
   align-items: start;
   flex-direction: column;
-  gap: 10px;
-  max-width: 367px;
-  min-height: 162px;
+  gap: .625rem;
+  max-width: 22.9375rem;
+  min-height: 10.125rem;
   padding: 2rem;
 }
 
@@ -160,33 +161,33 @@ footer section {
 footer section h1 {
   color: var(--color2);
   -webkit-text-stroke-color: var(--color1);
-  font-size: 26px;
+  font-size: '1.5rem';
 }
 
 footer section .prize {
   color: var(--color2);
-  font-size: 18px;
+  font-size: '1.125rem';
 }
 
 footer section .chip {
   background: var(--chipBgColor);
   color: var(--chipColor);
-  font-size: 16px;
-  border-radius: 19px;
-  height: 38px;
-  gap: 10px;
-  padding: 16px;
+  font-size: 1.5rem;
+  border-radius: 1.125rem;
+  height: 2.5rem;
+  gap: .65rem;
+  padding: 1rem;
   box-sizing: border-box;
 }
 
 .chip img {
-  height: 24px;
-  width: 24px;
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .container img {
-  height: 36px;
-  width: 36px;
+  height: 2.25rem;
+  width: 2.25rem;
 }
 
 @media screen and (max-width: 1030px) {
