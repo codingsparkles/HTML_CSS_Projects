@@ -25,8 +25,7 @@
     body,
     main,
     .radio-group,
-    .bill-type,
-    .bill-card,
+    .container,
     .type {
       display: flex;
       justify-content: center;
@@ -40,8 +39,7 @@
       flex-wrap: wrap;
     }
 
-    .bill-type,
-    .bill-card {
+    .container {
       height: 250px;
       width: 220px;
       border: .5px solid #C0C8E3;
@@ -71,12 +69,12 @@
     }
 
     .user-type {
-      font-size: 22px;
+      font-size: 1.40rem;
       font-weight: 400
     }
 
     .price {
-      font-size: 18px;
+      font-size: 1.25rem;
     }
 
     .bill-card button {
@@ -86,7 +84,12 @@
       height: 50px;
       width: 145px;
       border-radius: 4px;
-      margin-top: 1rem
+      margin-top: 1rem;
+      transition: scale 1s ease-in-out;
+    }
+
+    .bill-card button:hover {
+      scale: 1.25
     }
 
     .link a {
@@ -110,7 +113,7 @@
 
 <body>
   <main>
-    <div class="bill-type">
+    <div class="container bill-type">
       <div class="radio-group">
         <div class="type type-one">
           <input type="radio" id="monthly" name="bill-type" onchange="changeColor()">
@@ -122,7 +125,7 @@
         </div>
       </div>
     </div>
-    <div class="bill-card">
+    <div class="container bill-card">
       <div class="user-type">
         For individuals
       </div>
@@ -133,7 +136,7 @@
         Buy now
       </button>
     </div>
-    <div class="bill-card">
+    <div class="container bill-card">
       <div class="user-type">
         For families
       </div>
@@ -144,7 +147,7 @@
         Buy now
       </button>
     </div>
-    <div class="bill-card">
+    <div class="container bill-card">
       <div class="user-type">
         For teams
       </div>
