@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Star Animation</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+      background: rgb(249, 227, 230);
+    }
+
+    svg polygon {
+      stroke: rgb(160, 54, 137);
+      stroke-dashoffset: 25%;
+      stroke-dasharray: 0 50%;
+      stroke-width: 0.8;
+      animation: stroke 2s infinite alternate;
+    }
+
+    @keyframes stroke {
+      50% {
+        stroke-width: 1.2;
+      }
+
+      70% {
+        stroke-width: 1.5;
+      }
+
+      100% {
+        stroke-dashoffset: -25%;
+        stroke-dasharray: 50% 0;
+        stroke-width: 1.5;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <svg height='210' width='210'>
+    <polygon points='100,10 40,198 190,78 10,78 160,198' style='fill:transparent;fill-rule:nonzero;' />
+  </svg>
+</body>
+
+</html>
