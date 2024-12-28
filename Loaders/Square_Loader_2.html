@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Square Loader</title>
+	<style>
+		:root {
+			--bgColor: #DAFDBA;
+			--shadowColor: #45C4B0;
+		}
+
+		body {
+			min-height: 97vh;
+			background: var(--bgColor);
+			display: grid;
+			place-items: center;
+		}
+
+		.square {
+			height: 3rem;
+			width: 3rem;
+			color: var(--shadowColor);
+			box-shadow: 0 3rem, -3rem 0, 0 -3rem, 3rem 0;
+			animation: loader 2s alternate infinite;
+		}
+
+		@keyframes loader {
+			20% {
+				box-shadow: 0 3rem, -3rem 0, 0 -3rem, 3rem 0;
+			}
+
+			40% {
+				box-shadow: -3rem 3rem, -3rem -3rem, 3rem -3rem, 3rem 3rem;
+			}
+
+			60% {
+				box-shadow: -3rem 0, 0 -3rem, 3rem 0, 0 3rem;
+			}
+
+			80% {
+				box-shadow: -3rem -3rem, 3rem -3rem, 3rem 3rem, -3rem 3rem;
+			}
+
+			100% {
+				box-shadow: 0 -3rem, 3rem 0, 0 3rem, -3rem 0;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="square"></div>
+</body>
+
+</html>

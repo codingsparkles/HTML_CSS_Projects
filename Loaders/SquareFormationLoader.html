@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Square Animation</title>
+  <style>
+    :root {
+      --bgColor: #FFE4D6;
+      --shadowColor: #B0578D;
+    }
+
+    body {
+      min-height: 97vh;
+      background: var(--bgColor);
+      display: grid;
+      place-items: center;
+    }
+
+    .square {
+      height: 3rem;
+      width: 3rem;
+      background: var(--shadowColor);
+      color: var(--shadowColor);
+      -webkit-box-reflect: right -3rem;
+      animation: loader 2s infinite;
+    }
+
+    @keyframes loader {
+      0% {
+        box-shadow: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+      }
+
+      14% {
+        box-shadow: 0 3rem, 0 3rem, 0 3rem, 0 3rem, 0 3rem, 0 3rem, 0 3rem;
+      }
+
+      28% {
+        box-shadow: 0 3rem, -3rem 3rem, -3rem 3rem, -3rem 3rem, -3rem 3rem, -3rem 3rem, -3rem 3rem;
+      }
+
+      42% {
+        box-shadow: 0 3rem, -3rem 3rem, -6rem 3rem, -6rem 3rem, -6rem 3rem, -6rem 3rem, -6rem 3rem;
+      }
+
+      56% {
+        box-shadow: 0 3rem, -3rem 3rem, -6rem 3rem, -6rem 0, -6rem 0, -6rem 0, -6rem 0;
+      }
+
+      70% {
+        box-shadow: 0 3rem, -3rem 3rem, -6rem 3rem, -6rem 0, -6rem -3rem, -6rem -3rem, -6rem -3rem;
+      }
+
+      84% {
+        box-shadow: 0 3rem, -3rem 3rem, -6rem 3rem, -6rem 0, -6rem -3rem, -3rem -3rem, -3rem -3rem;
+      }
+
+      100% {
+        box-shadow: 0 3rem, -3rem 3rem, -6rem 3rem, -6rem 0, -6rem -3rem, -3rem -3rem, 0 -3rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="square"></div>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Circle Progress Bar Animation</title>
+  <style>
+    :root {
+      --bgColor: #F7EFE5;
+      --shadowColor: #674188
+    }
+
+    body {
+      min-height: 97vh;
+      background: var(--bgColor)
+    }
+
+    body,
+    .circle {
+      display: grid;
+      place-items: center;
+    }
+
+    .circle {
+      height: 8rem;
+      width: 8rem;
+      border-radius: 50%;
+      background: conic-gradient(var(--shadowColor) var(--angle), #0000 0 360deg);
+      animation: 5s loader linear infinite;
+    }
+
+    .circle::before {
+      position: absolute;
+      border-radius: 50%;
+      content: '';
+      height: 5rem;
+      width: 5rem;
+      background: var(--bgColor);
+    }
+
+    @keyframes loader {
+      to {
+        --angle: 360deg;
+      }
+    }
+
+    @property --angle {
+      syntax: "<angle>";
+      initial-value: 0deg;
+      inherits: false;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="circle"></div>
+</body>
+
+</html>

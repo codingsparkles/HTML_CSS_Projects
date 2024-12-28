@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Loader</title>
+  <style>
+    body {
+      min-height: 97vh;
+      background: #FFEBD4;
+      display: grid;
+      place-items: center;
+    }
+
+    .loader {
+      height: 3rem;
+      width: 3rem;
+      border-radius: 50%;
+      color: #6C48C5;
+      box-shadow: 0 5px, 0 -5px, 0 0 0 10px #FFEBD4, 0 -20px, 0 20px, -20px 0, 20px 0;
+      animation: rotate 1s linear infinite;
+    }
+
+    @keyframes rotate {
+      to {
+        rotate: 360deg;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="loader"></div>
+</body>
+
+</html>
