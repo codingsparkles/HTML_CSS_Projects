@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Colorful Squares Loader</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #d4ffe0;
+    }
+
+    body,
+    .loader {
+      display: grid;
+      place-items: center;
+    }
+
+    .square {
+      height: 5rem;
+      width: 5rem;
+      border: 2px solid var(--c);
+      position: absolute;
+      animation: anime1 2s alternate infinite
+    }
+
+    @keyframes anime1 {
+      to {
+        rotate: calc(var(--i) * 10deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="loader">
+    <div class="square" style="--i:0;--c:#6C48C5"></div>
+    <div class="square" style="--i:1;--c:#f5b7b1"></div>
+    <div class="square" style="--i:2;--c:#8e44ad"></div>
+    <div class="square" style="--i:3;--c:#2980b9"></div>
+    <div class="square" style="--i:4;--c:#17a589"></div>
+    <div class="square" style="--i:5;--c:#2ecc71"></div>
+    <div class="square" style="--i:6;--c:#f1c40f"></div>
+    <div class="square" style="--i:7;--c:#ba4a00"></div>
+    <div class="square" style="--i:8;--c:#839192"></div>
+    <div class="square" style="--i:9;--c:#283747"></div>
+  </div>
+</body>
+
+</html>
